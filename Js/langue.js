@@ -7,7 +7,6 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-// Fermer le menu mobile quand on clique sur un lien
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
@@ -15,7 +14,6 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
-// Fermer le menu mobile quand on clique ailleurs
 document.addEventListener("click", (e) => {
   if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
     hamburger.classList.remove("active");
@@ -31,13 +29,11 @@ const currentFlag = document.getElementById("currentFlag");
 const currentLang = document.getElementById("currentLang");
 const languageOptions = document.querySelectorAll(".language-option");
 
-// Ouvrir/fermer le dropdown
 languageButton.addEventListener("click", (e) => {
   e.stopPropagation();
   languageSelector.classList.toggle("active");
 });
 
-// Fermer le dropdown quand on clique ailleurs
 document.addEventListener("click", (e) => {
   if (!languageSelector.contains(e.target)) {
     languageSelector.classList.remove("active");
@@ -51,25 +47,33 @@ const translations = {
     about: "À propos",
     services: "Services",
     contact: "Contact",
+    heroTitle: `Envoyez,<br>épargnez, gagnez.<br><span style="color: #2563eb;">Facilement</span>`,
+    heroDescription: "Envoyez de l'argent à vos proches, mettez de côté quand vous le souhaitez, ou faites grandir votre argent avec des intérêts. Rapide et sécurisé!",
+    ctaButton: "Nos Services",
+    testimonialText: `<span class="testimonial-number">+200</span> clients <br> satisfaits`
   },
   en: {
     home: "Home",
     about: "About",
     services: "Services",
     contact: "Contact",
-  },
+    heroTitle: `Send,<br>save, earn.<br><span style="color: #2563eb;">Easily</span>`,
+    heroDescription: "Send money to your loved ones, save anytime, or grow your money with interest. Fast and secure!",
+    ctaButton: "Our Services",
+    testimonialText: `<span class="testimonial-number">+200</span> satisfied <br> clients`
+  }
 };
 
-// Changer la langue
+// Appliquer les traductions lors du clic
 languageOptions.forEach((option) => {
   option.addEventListener("click", () => {
     const selectedLang = option.dataset.lang;
 
-    // Mettre à jour l'option active
+    // Marquer l'option comme active
     languageOptions.forEach((opt) => opt.classList.remove("active"));
     option.classList.add("active");
 
-    // Mettre à jour le bouton principal
+    // Changer le drapeau et le texte
     if (selectedLang === "fr") {
       currentFlag.className = "flag-icon flag-fr";
       currentLang.textContent = "Français";
@@ -78,7 +82,7 @@ languageOptions.forEach((option) => {
       currentLang.textContent = "English";
     }
 
-    // Mettre à jour le contenu de la page
+    // Mettre à jour le contenu
     updatePageContent(selectedLang);
 
     // Fermer le dropdown
@@ -86,20 +90,23 @@ languageOptions.forEach((option) => {
   });
 });
 
-// Fonction pour mettre à jour le contenu de la page
+// Fonction de mise à jour dynamique
 function updatePageContent(lang) {
-  document.getElementById("welcomeText").textContent =
-    translations[lang].welcome;
-  document.getElementById("descriptionText").textContent =
-    translations[lang].description;
+  const t = translations[lang];
 
-  // Mettre à jour les liens de navigation
+  document.getElementById("welcomeText").textContent = t.welcome;
+  document.getElementById("descriptionText").textContent = t.description;
+
   const navLinks = document.querySelectorAll(".nav-link");
-  navLinks[0].textContent = translations[lang].home;
-  navLinks[1].textContent = translations[lang].about;
-  navLinks[2].textContent = translations[lang].services;
-  navLinks[3].textContent = translations[lang].contact;
+  navLinks[0].textContent = t.home;
+  navLinks[1].textContent = t.about;
+  navLinks[2].textContent = t.services;
+  navLinks[3].textContent = t.contact;
 
-  // Mettre à jour la langue du document
+  document.querySelector(".hero-title").innerHTML = t.heroTitle;
+  document.querySelector(".hero-description").textContent = t.heroDescription;
+  document.querySelector(".cta-button").textContent = t.ctaButton;
+  document.querySelector(".testimonial-text").innerHTML = t.testimonialText;
+
   document.documentElement.lang = lang;
 }
