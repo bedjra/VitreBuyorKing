@@ -1,7 +1,7 @@
 .about-section {
     position: relative;
     min-height: 500px;
-    background: url('https://.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80') center/cover no-repeat;
+    background: url('../images/prop.svg') center/cover no-repeat;
     background-attachment: fixed;
     overflow: hidden;
     display: flex;
@@ -61,15 +61,12 @@
 
 .cta-button {
     display: inline-block;
-    background: #ffffff;
-    color: #333333;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
