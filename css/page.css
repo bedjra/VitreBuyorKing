@@ -463,18 +463,14 @@ h1 {
     font-size: 1.2rem;
 }
 
-.main-image {
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #d6d0db 100%);
+.main {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
 }
+
 
 
 
@@ -513,9 +509,8 @@ h1 {
         margin-bottom: 20px;
     }
 
-    .main-image {
-        max-width: 300px;
-        height: 250px;
+    .main {
+        margin-right: 100px;
 
     }
 
