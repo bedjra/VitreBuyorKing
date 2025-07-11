@@ -108,32 +108,6 @@
 
 
     <script src="Js/langue.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll("section[id]");
-            const navLinks = document.querySelectorAll(".nav-link");
-
-            window.addEventListener("scroll", () => {
-                let current = "";
-
-                sections.forEach((section) => {
-                    const sectionTop = section.offsetTop - 80;
-                    const sectionHeight = section.offsetHeight;
-
-                    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                        current = section.getAttribute("id");
-                    }
-                });
-
-                navLinks.forEach((link) => {
-                    link.classList.remove("active");
-                    if (link.getAttribute("href").includes(current)) {
-                        link.classList.add("active");
-                    }
-                });
-            });
-        });
-    </script>
 
 
 
@@ -142,37 +116,38 @@
 
 
 
-    <section class="services-section">
-        <h1>NOS SERVICES</h1>
-        <p class="intro">Découvrez nos services</p>
-        <div class="services-container">
 
-            <div class="service-card">
-                <img src="image1.jpg" alt="Transferts d'argent">
-                <h2>Transferts d'argent</h2>
-                <p>Transferts rapides et sécurisés à Aflao (bientôt Accra), avec offres et tarifs compétitifs.</p>
-                <a href="#">Lire Plus <span>↗</span></a>
-            </div>
+    <section class="services-section" id="services">
+    <h1>NOS SERVICES</h1>
+    <p class="intro">Découvrez nos services</p>
+    <div class="services-container">
 
-            <div class="service-card">
-                <img src="image2.jpg" alt="Épargne & Investissement">
-                <h2>Épargne & Investissement</h2>
-                <p>Épargne sécurisée : comptes à intérêts, dépôts à terme (4-7%), microfinance.</p>
-                <a href="#">Lire Plus <span>↗</span></a>
-            </div>
-
-            <div class="service-card">
-                <img src="image3.jpg" alt="Location & Hébergement">
-                <h2>Location & Hébergement</h2>
-                <p>Location de voitures, villas et appartements meublés à Accra (prochainement ailleurs au Ghana).</p>
-                <a href="#">Lire Plus <span>↗</span></a>
-            </div>
-
+        <div class="service-card">
+            <img src="image1.jpg" alt="Transferts d'argent">
+            <h2>Transferts d'argent</h2>
+            <p>Transferts rapides et sécurisés à Aflao (bientôt Accra), avec offres et tarifs compétitifs.</p>
+            <a href="#">Lire Plus <span>↗</span></a>
         </div>
+
+        <div class="service-card">
+            <img src="image2.jpg" alt="Épargne & Investissement">
+            <h2>Épargne & Investissement</h2>
+            <p>Épargne sécurisée : comptes à intérêts, dépôts à terme (4-7%), microfinance.</p>
+            <a href="#">Lire Plus <span>↗</span></a>
+        </div>
+
+        <div class="service-card">
+            <img src="image3.jpg" alt="Location & Hébergement">
+            <h2>Location & Hébergement</h2>
+            <p>Location de voitures, villas et appartements meublés à Accra (prochainement ailleurs au Ghana).</p>
+            <a href="#">Lire Plus <span>↗</span></a>
+        </div>
+
+    </div>
     </section>
 
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="contact-left">
             <h2>CONTACTEZ - NOUS</h2>
             <p class="subtitle">Envoyez-nous un message</p>
@@ -233,6 +208,34 @@
     </footer>
 
 
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll(".nav-link");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 80;
+                    const sectionHeight = section.offsetHeight;
+
+                    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
 
 
 </body>

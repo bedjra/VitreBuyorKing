@@ -99,6 +99,15 @@ h1 {
     background-color: #0066cc;
 }
 
+
+.nav-link:target,
+.nav-link.active {
+    color: #0066cc;
+}
+
+
+
+
 /* Sélecteur de langue */
 .language-selector {
     position: relative;
