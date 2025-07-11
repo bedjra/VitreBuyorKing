@@ -315,7 +315,7 @@ h1 {
 .hero-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 30px 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
@@ -471,7 +471,10 @@ h1 {
     overflow: hidden;
 }
 
-
+.main img {
+    height: 500px;
+    width: 550px;
+}
 
 
 
@@ -510,9 +513,16 @@ h1 {
     }
 
     .main {
-        margin-right: 100px;
+        margin-left: -5px;
 
     }
+
+    .main img {
+        height: 320px;
+
+    }
+
+
 
 }
 
@@ -533,13 +543,6 @@ h1 {
     .amount-badge {
         font-size: 0.85rem;
         padding: 10px 15px;
-    }
-
-    .main-image {
-        max-width: 250px;
-        height: 200px;
-        margin-left: 90px;
-
     }
 
 
