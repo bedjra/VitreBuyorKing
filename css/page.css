@@ -1,3 +1,6 @@
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +49,7 @@ h1 {
 }
 
 .logo-img {
-    height: 40px;
+    height: 55px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -256,6 +259,12 @@ h1 {
         flex: none;
     }
 
+    .logo-img {
+        height: 45px;
+        width: auto;
+        transition: transform 0.3s ease;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -350,7 +359,7 @@ h1 {
 }
 
 .cta-button {
-    background: #2563eb;
+    background: #234A90;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -479,6 +488,7 @@ h1 {
 
 
 /* Responsive */
+
 @media (max-width: 1024px) {
     .hero-section {
         gap: 40px;
@@ -569,3 +579,5 @@ h1 {
     }
 
 }
+
+

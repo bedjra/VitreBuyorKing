@@ -1,0 +1,264 @@
+
+/* Écrans très larges (1440px et plus) */
+@media screen and (min-width: 1440px) {
+    .hero-section {
+        max-width: 1400px;
+        padding: 80px 40px;
+        gap: 80px;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+        line-height: 1.05;
+    }
+
+    .hero-description {
+        font-size: 1.2rem;
+        max-width: 550px;
+    }
+
+    .main img {
+        height: 580px;
+        width: 630px;
+    }
+
+    .amount-badges {
+        top: -30px;
+        right: 30px;
+        gap: 20px;
+    }
+
+    .amount-badge {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        height: 70px;
+    }
+
+    .nav-menu {
+        gap: 40px;
+    }
+
+    .nav-link {
+        font-size: 17px;
+    }
+
+    .logo-img {
+        height: 60px;
+    }
+}
+
+/* Écrans ultra-larges (1920px et plus) */
+@media screen and (min-width: 1920px) {
+    .hero-section {
+        max-width: 1600px;
+        padding: 50px 20px;
+        gap: 100px;
+    }
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+    .hero-description {
+        font-size: 1.3rem;
+        max-width: 600px;
+    }
+
+    .main img {
+        height: 650px;
+        width: 700px;
+    }
+
+    .nav-container {
+        max-width: 1600px;
+        height: 80px;
+    }
+
+    .nav-menu {
+        gap: 50px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+
+    .logo-img {
+        height: 65px;
+    }
+
+    .cta-button {
+        padding: 18px 35px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Écrans 4K et plus (2560px et plus) */
+@media screen and (min-width: 2560px) {
+    .hero-section {
+        max-width: 2000px;
+        padding: 120px 60px;
+        gap: 120px;
+    }
+
+    .hero-title {
+        font-size: 5rem;
+    }
+
+    .hero-description {
+        font-size: 1.4rem;
+        max-width: 650px;
+    }
+
+    .main img {
+        height: 750px;
+        width: 800px;
+    }
+
+    .nav-container {
+        max-width: 2000px;
+        height: 90px;
+    }
+
+    .nav-menu {
+        gap: 60px;
+    }
+
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .logo-img {
+        height: 70px;
+    }
+
+    .amount-badges {
+        top: -40px;
+        right: 40px;
+        gap: 25px;
+    }
+
+    .amount-badge {
+        padding: 18px 30px;
+        font-size: 1.1rem;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .testimonial-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Optimisations pour les écrans larges en mode paysage */
+@media screen and (min-width: 1200px) and (max-height: 800px) {
+    .hero-section {
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 3.2rem;
+    }
+
+    .main img {
+        height: 450px;
+        width: 500px;
+    }
+}
+
+/* Amélioration du testimonial pour les grands écrans */
+@media screen and (min-width: 1200px) {
+    .testimonial {
+        margin-top: -60px;
+        margin-left: 200px;
+    }
+
+    .avatar {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .testimonial {
+        margin-top: -80px;
+        margin-left: 220px;
+    }
+}
+
+/* Optimisation des badges pour les grands écrans */
+@media screen and (min-width: 1200px) {
+    .amount-badges {
+        top: -25px;
+        right: 25px;
+    }
+}
+
+/* Fluidité du layout pour tous les grands écrans */
+@media screen and (min-width: 1200px) {
+    .hero-section {
+        min-height: 80vh;
+        display: grid;
+        align-items: center;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero-visual {
+        min-height: 500px;
+    }
+}
+
+/* Amélioration de la navigation pour les grands écrans */
+@media screen and (min-width: 1200px) {
+    .navbar {
+        padding: 0 30px;
+    }
+
+    .nav-container {
+        height: 65px;
+    }
+
+    .language-button {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .flag-icon {
+        width: 22px;
+        height: 16px;
+    }
+}
+
+/* Hover effects améliorés pour les grands écrans */
+@media screen and (min-width: 1200px) {
+    .hero-title {
+        transition: all 0.3s ease;
+    }
+
+    .main img {
+        transition: transform 0.3s ease;
+    }
+
+    .main img:hover {
+        transform: scale(1.02);
+    }
+
+    .amount-badge {
+        transition: all 0.3s ease;
+    }
+
+    .amount-badge:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    }
+}
