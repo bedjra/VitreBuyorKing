@@ -1,4 +1,3 @@
-
 /* Écrans très larges (1440px et plus) */
 @media screen and (min-width: 1440px) {
     .hero-section {
@@ -180,6 +179,13 @@
         margin-left: 200px;
     }
 
+    .testimonial-avatars {
+        display: flex;
+        margin-right: 10px;
+        margin-top: -15px;
+
+    }
+
     .avatar {
         width: 55px;
         height: 55px;
@@ -190,6 +196,14 @@
     .testimonial {
         margin-top: -80px;
         margin-left: 220px;
+    }
+
+    
+    .testimonial-avatars {
+        display: flex;
+        margin-right: 10px;
+        margin-top: -3px;
+
     }
 }
 
