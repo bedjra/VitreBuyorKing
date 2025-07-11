@@ -47,16 +47,12 @@ document.addEventListener("click", (e) => {
 // Textes pour chaque langue
 const translations = {
   fr: {
-    welcome: "Bienvenue sur BuyorKing",
-    description: "Changez la langue avec le sélecteur en haut à droite.",
     home: "Accueil",
     about: "À propos",
     services: "Services",
     contact: "Contact",
   },
   en: {
-    welcome: "Welcome to BuyorKing",
-    description: "Change the language with the selector at the top right.",
     home: "Home",
     about: "About",
     services: "Services",

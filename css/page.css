@@ -83,7 +83,7 @@ body {
 .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -5px;
     left: 0;
     width: 100%;
     height: 2px;
@@ -258,7 +258,7 @@ body {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 20px 0;
-        gap: 20px;
+        gap: 30px;
         flex: none;
         justify-content: center;
     }
@@ -268,7 +268,7 @@ body {
     }
 
     .nav-link {
-        padding: 15px 0;
+        padding: 5px 0;
         font-size: 18px;
     }
 
@@ -298,5 +298,256 @@ body {
     .flag-icon {
         width: 18px;
         height: 13px;
+    }
+}
+
+
+/***************   hero ****************/
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #1a1a1a;
+    letter-spacing: -0.02em;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cta-button {
+    background: #2563eb;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+}
+
+.cta-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.testimonial-avatars {
+    display: flex;
+    margin-right: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: -10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.avatar:first-child {
+    margin-left: 0;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.avatar:nth-child(2) {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.avatar:nth-child(3) {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.testimonial-text {
+    font-weight: 600;
+    color: #333;
+}
+
+.testimonial-number {
+    color: #2563eb;
+}
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount-badges {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2;
+}
+
+.amount-badge {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.amount-badge.green {
+    color: #059669;
+}
+
+.amount-badge.orange {
+    color: #ea580c;
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+}
+
+.main-image {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #d6d0db 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero-section {
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .amount-badges {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .main-image {
+        max-width: 300px;
+        height: 250px;
+
+    }
+
+    .person-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    .small-person {
+        width: 80px;
+        height: 80px;
+        bottom: -20px;
+        right: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 30px 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .amount-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .amount-badge {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+    }
+
+    .main-image {
+        max-width: 250px;
+        height: 200px;
+    }
+
+    .person-image {
+        width: 180px;
+        height: 180px;
     }
 }
