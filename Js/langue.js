@@ -194,8 +194,10 @@ function updatePageContent(lang) {
 
   // Placeholders
   document.getElementById("contactName").placeholder = t.contactNamePlaceholder;
-  document.getElementById("contactPhone").placeholder =t.contactPhonePlaceholder;
-  document.getElementById("contactMessage").placeholder =t.contactMessagePlaceholder;
+  document.getElementById("contactPhone").placeholder =
+    t.contactPhonePlaceholder;
+  document.getElementById("contactMessage").placeholder =
+    t.contactMessagePlaceholder;
 
   // Footer
   document.getElementById("footerText").textContent = t.footerText;
@@ -206,3 +208,29 @@ function updatePageContent(lang) {
 
   document.documentElement.lang = lang;
 }
+
+
+  // Whatsapp
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault(); // Empêche le rechargement de la page
+
+  const name = document.getElementById("contactName").value.trim();
+  const phone = document.getElementById("contactPhone").value.trim();
+  const message = document.getElementById("contactMessage").value.trim();
+
+  if (!name || !phone || !message) {
+    alert("Veuillez remplir tous les champs avant d’envoyer le message.");
+    return;
+  }
+
+  // Format du message à envoyer
+  const text = `Bonjour, je suis ${name} (${phone}).\n\n${message}`;
+  const encodedText = encodeURIComponent(text);
+
+  // Numéro WhatsApp au format international sans + (Togo : 228)
+  const whatsappNumber = "22897943844";
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+  // Ouvrir WhatsApp
+  window.open(whatsappURL, "_blank");
+});
