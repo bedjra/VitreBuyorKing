@@ -209,4 +209,29 @@ function updatePageContent(lang) {
   document.documentElement.lang = lang;
 }
 
+languageOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    const selectedLang = option.dataset.lang;
 
+    // Mettre à jour l'image et le texte du bouton principal
+    if (selectedLang === "fr") {
+      currentFlag.src = "images/fr.png";
+      currentFlag.alt = "Français";
+      currentLang.textContent = "Français";
+    } else {
+      currentFlag.src = "images/en.png";
+      currentFlag.alt = "English";
+      currentLang.textContent = "English";
+    }
+
+    // Mise à jour visuelle active dans la liste
+    languageOptions.forEach((opt) => opt.classList.remove("active"));
+    option.classList.add("active");
+
+    // Cacher la liste des langues si tu as un menu déroulant
+    languageSelector.classList.remove("active");
+
+    // Ton code de traduction, etc.
+    updatePageContent(selectedLang);
+  });
+});

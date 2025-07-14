@@ -145,7 +145,7 @@ h1 {
     background: linear-gradient(90deg, #002654 33%, white 33%, white 66%, #CE1126 66%);
 }
 
-/*
+
 
 .flag-en {
     background: linear-gradient(to bottom, #012169 33%, white 33%, white 66%, #C8102E 66%);
@@ -175,7 +175,7 @@ h1 {
     height: 3px;
     background: white;
 }
-*/
+
 
 .language-option {
   display: flex;
