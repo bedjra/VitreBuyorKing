@@ -286,7 +286,21 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const form = document.getElementById("contactForm");
+            const languageDropdown = document.getElementById("languageDropdown");
+            let currentLang = "en"; // Langue par défaut
 
+            // Gestion du changement de langue dans le dropdown
+            languageDropdown.querySelectorAll(".language-option").forEach(option => {
+                option.addEventListener("click", () => {
+                    currentLang = option.dataset.lang;
+
+                    // Mise à jour visuelle des options actives
+                    languageDropdown.querySelectorAll(".language-option").forEach(opt => opt.classList.remove("active"));
+                    option.classList.add("active");
+                });
+            });
+
+            // Gestion de l'envoi du formulaire
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
 
@@ -295,14 +309,20 @@
                 const message = document.getElementById("contactMessage").value.trim();
 
                 if (!name || !phone || !message) {
-                    alert("Veuillez remplir tous les champs.");
+                    alert(currentLang === "fr"
+                        ? "Veuillez remplir tous les champs."
+                        : "Please fill in all fields.");
                     return;
                 }
 
-                const fullMessage =
-                    `Bonjour, je me nomme ${name} (${phone}).%0A%0A` +
-                    `Je vous contacte au sujet suivant :%0A${message}`;
-                const whatsappNumber = "22897943844";
+                let fullMessage;
+                if (currentLang === "fr") {
+                    fullMessage = `Bonjour, je me nomme ${name} (${phone}).%0A%0AJe vous contacte au sujet suivant :%0A${message}`;
+                } else {
+                    fullMessage = `Hello, my name is ${name} (${phone}).%0A%0AI am contacting you regarding the following:%0A${message}`;
+                }
+
+                const whatsappNumber = "22897943844"; // Numéro au format international (sans +)
                 const whatsappURL = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
 
                 window.open(whatsappURL, "_blank");
