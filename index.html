@@ -299,7 +299,9 @@
                     return;
                 }
 
-                const fullMessage = `Bonjour, je suis ${name} (${phone})%0A%0A${message}`;
+                const fullMessage =
+                    `Bonjour, je me nomme ${name} (${phone}).%0A%0A` +
+                    `Je vous contacte au sujet suivant :%0A${message}`;
                 const whatsappNumber = "22897943844";
                 const whatsappURL = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
 
