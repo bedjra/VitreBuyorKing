@@ -185,4 +185,7 @@ function updatePageContent(lang) {
   document.getElementById("copyright").textContent = t.copyright;
 
   document.documentElement.lang = lang;
+
+
+
 }

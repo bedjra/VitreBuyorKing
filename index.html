@@ -209,7 +209,7 @@
         </div>
         <div class="footer-container">
             <div class="logo-placeholder">
-                <img src="images/logoB.svg" alt="" height="80px" >
+                <img src="images/logoB.svg" alt="" height="80px">
             </div>
             <br>
             <div class="footer-parent">
@@ -260,6 +260,24 @@
                 });
             });
         });
+
+        // Définir la langue par défaut au chargement
+        document.addEventListener("DOMContentLoaded", () => {
+            updatePageContent("en");
+
+            // Mettre à jour l'affichage de la langue sélectionnée
+            currentFlag.className = "flag-icon flag-en";
+            currentLang.textContent = "English";
+
+            // Marquer le bouton anglais comme actif
+            languageOptions.forEach((opt) => {
+                opt.classList.remove("active");
+                if (opt.dataset.lang === "en") {
+                    opt.classList.add("active");
+                }
+            });
+        });
+
     </script>
 
 
