@@ -283,6 +283,30 @@
 
 
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const form = document.getElementById("contactForm");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const name = document.getElementById("contactName").value.trim();
+                const phone = document.getElementById("contactPhone").value.trim();
+                const message = document.getElementById("contactMessage").value.trim();
+
+                if (!name || !phone || !message) {
+                    alert("Veuillez remplir tous les champs.");
+                    return;
+                }
+
+                const fullMessage = `Bonjour, je suis ${name} (${phone})%0A%0A${message}`;
+                const whatsappNumber = "22897943844";
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${fullMessage}`;
+
+                window.open(whatsappURL, "_blank");
+            });
+        });
+    </script>
 
 
 </body>
