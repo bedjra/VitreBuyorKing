@@ -107,7 +107,6 @@ h1 {
 
 
 
-
 /* Sélecteur de langue */
 .language-selector {
     position: relative;
@@ -147,6 +146,7 @@ h1 {
 }
 
 /*
+
 .flag-en {
     background: linear-gradient(to bottom, #012169 33%, white 33%, white 66%, #C8102E 66%);
     position: relative;
@@ -176,35 +176,21 @@ h1 {
     background: white;
 }
 */
-.flag-en {
-  position: relative;
-  width: 60px;   /* largeur du drapeau */
-  height: 40px;  /* hauteur du drapeau */
-  background-color: white; /* fond blanc */
-  border: 1px solid #ccc;  /* bordure légère */
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espace entre l’image et le texte */
+  cursor: pointer;
 }
 
-/* Bande verticale rouge (croix) */
-.flag-en::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 25px;   /* centre horizontal */
-  width: 10px;  /* largeur de la bande */
-  height: 100%;
-  background-color: #CF142B; /* rouge croix */
+.flag-icon {
+  width: 24px;  /* largeur drapeau */
+  height: auto; /* garde les proportions */
+  display: block;
 }
 
-/* Bande horizontale rouge (croix) */
-.flag-en::after {
-  content: "";
-  position: absolute;
-  top: 15px;   /* centre vertical */
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background-color: #CF142B; /* rouge croix */
-}
+
 
 
 
