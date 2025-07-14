@@ -32,10 +32,6 @@
   transition: transform 0.3s ease;
 }
 
-.service-card {
-  flex: 1 1 calc(33.333% - 20px); /* 3 cartes par ligne avec espace */
-  max-width: calc(33.333% - 20px);
-}
 
 
 .service-card:hover {
@@ -214,7 +210,7 @@
 
 }
 
-.footer-placeholder img{
+.footer-placeholder img {
   height: 10px;
 }
 
@@ -241,6 +237,14 @@ hr {
   font-weight: bold;
 }
 
+
+  .service-card {
+    flex: 1 1 calc(33.333% - 20px);
+    /* 3 cartes par ligne avec espace */
+    max-width: calc(33.333% - 20px);
+  }
+
+
 /* Responsive styles */
 @media (max-width: 1024px) {
   .services-container {
@@ -250,6 +254,11 @@ hr {
 
   .service-card {
     flex: 1 1 100%;
+  }
+
+  .service-card {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(100% );
   }
 }
 
