@@ -56,13 +56,16 @@ const translations = {
     servicesTitle: "NOS SERVICES",
     servicesIntro: "Découvrez nos services",
     service1Title: "Transferts d'argent",
-    service1Desc: "Transferts rapides et sécurisés à Aflao (bientôt Accra), avec offres et tarifs compétitifs.",
+    service1Desc:
+      "Transferts rapides et sécurisés à Aflao (bientôt Accra), avec offres et tarifs compétitifs.",
     service1More: "Lire Plus ↗",
     service2Title: "Épargne & Investissement",
-    service2Desc: "Épargne sécurisée : comptes à intérêts, dépôts à terme (4-7%), microfinance.",
+    service2Desc:
+      "Épargne sécurisée : comptes à intérêts, dépôts à terme (4-7%), microfinance.",
     service2More: "Lire Plus ↗",
     service3Title: "Location & Hébergement",
-    service3Desc: "Location de voitures, villas et appartements meublés à Accra (prochainement ailleurs au Ghana).",
+    service3Desc:
+      "Location de voitures, villas et appartements meublés à Accra (prochainement ailleurs au Ghana).",
     service3More: "Lire Plus ↗",
 
     // Contact
@@ -72,6 +75,10 @@ const translations = {
     addressText: "123 Aflao Ghana",
     emailText: "Email : info@bks.com",
     phoneText: "(+233) 456-78909",
+
+    contactNamePlaceholder: "Entrez votre nom...",
+    contactPhonePlaceholder: "Entrez votre numéro...",
+    contactMessagePlaceholder: "Entrez votre message...",
 
     // Footer
     footerText:
@@ -96,13 +103,16 @@ const translations = {
     servicesTitle: "OUR SERVICES",
     servicesIntro: "Discover our services",
     service1Title: "Money Transfers",
-    service1Desc: "Fast and secure transfers in Aflao (soon Accra), with competitive offers and rates.",
+    service1Desc:
+      "Fast and secure transfers in Aflao (soon Accra), with competitive offers and rates.",
     service1More: "Read More ↗",
     service2Title: "Savings & Investment",
-    service2Desc: "Secure savings: interest accounts, term deposits (4-7%), microfinance.",
+    service2Desc:
+      "Secure savings: interest accounts, term deposits (4-7%), microfinance.",
     service2More: "Read More ↗",
     service3Title: "Rentals & Accommodation",
-    service3Desc: "Car, villa, and furnished apartment rentals in Accra (soon in other parts of Ghana).",
+    service3Desc:
+      "Car, villa, and furnished apartment rentals in Accra (soon in other parts of Ghana).",
     service3More: "Read More ↗",
 
     // Contact
@@ -112,6 +122,10 @@ const translations = {
     addressText: "123 Aflao Ghana",
     emailText: "Email: info@bks.com",
     phoneText: "(+233) 456-78909",
+
+    contactNamePlaceholder: "Enter your name...",
+    contactPhonePlaceholder: "Enter your phone number...",
+    contactMessagePlaceholder: "Enter your message...",
 
     // Footer
     footerText:
@@ -131,7 +145,8 @@ languageOptions.forEach((option) => {
     languageOptions.forEach((opt) => opt.classList.remove("active"));
     option.classList.add("active");
 
-    currentFlag.className = selectedLang === "fr" ? "flag-icon flag-fr" : "flag-icon flag-en";
+    currentFlag.className =
+      selectedLang === "fr" ? "flag-icon flag-fr" : "flag-icon flag-en";
     currentLang.textContent = selectedLang === "fr" ? "Français" : "English";
 
     updatePageContent(selectedLang);
@@ -177,6 +192,11 @@ function updatePageContent(lang) {
   document.getElementById("emailText").textContent = t.emailText;
   document.getElementById("phoneText").textContent = t.phoneText;
 
+  // Placeholders
+  document.getElementById("contactName").placeholder = t.contactNamePlaceholder;
+  document.getElementById("contactPhone").placeholder =t.contactPhonePlaceholder;
+  document.getElementById("contactMessage").placeholder =t.contactMessagePlaceholder;
+
   // Footer
   document.getElementById("footerText").textContent = t.footerText;
   document.getElementById("openingHours1").textContent = t.opening1;
@@ -185,7 +205,4 @@ function updatePageContent(lang) {
   document.getElementById("copyright").textContent = t.copyright;
 
   document.documentElement.lang = lang;
-
-
-
 }
