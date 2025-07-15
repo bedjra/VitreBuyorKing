@@ -16,6 +16,8 @@
         href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
 
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -102,18 +104,18 @@
 
     <section id="home" class="hero-section">
         <div class="hero-content">
-            <h1 class="hero-title">
+            <h1 class="hero-title"  data-aos="fade-right" >
                 Envoyez,<br>
                 épargnez, gagnez.<br>
                 <span style="color: #234A90;">Facilement</span>
             </h1>
 
-            <p class="hero-description">
+            <p class="hero-description"  data-aos="fade-right">
                 Envoyez de l'argent à vos proches, mettez de côté quand vous le souhaitez, ou faites grandir votre
                 argent avec des intérêts. Rapide et sécurisé!
             </p>
 
-            <div class="hero-actions">
+            <div class="hero-actions" data-aos="fade-up">
                 <a href="#services" class="cta-button">Nos Services</a>
 
                 <div class="testimonial">
@@ -131,7 +133,7 @@
             </div>
         </div>
 
-        <div class="main">
+        <div class="main"  data-aos="fade-up">
             <img src="images/imge2.svg" alt="Illustration">
         </div>
     </section>
@@ -152,23 +154,23 @@
         <p class="intro" id="servicesIntro">Découvrez nos services</p>
         <div class="services-container">
 
-            <div class="service-card">
-                <img src="images/serv1.jpg" alt="Transferts d'argent">
+            <div class="service-card" data-aos="fade-up" >
+                <img src="images/transfert-bks.png" alt="Transferts d'argent">
                 <h2 id="service1Title">Transferts d'argent</h2>
                 <p id="service1Desc">Transferts rapides et sécurisés à Aflao (bientôt Accra), avec offres et tarifs
                     compétitifs.</p>
                 <a href="#" class="readmore" id="service1More">Lire Plus <span>↗</span></a>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="images/serv2.jpg" alt="Épargne & Investissement">
                 <h2 id="service2Title">Épargne & Investissement</h2>
                 <p id="service2Desc">Épargne sécurisée : comptes à intérêts, dépôts à terme (4-7%), microfinance.</p>
                 <a href="#" class="readmore" id="service2More">Lire Plus <span>↗</span></a>
             </div>
 
-            <div class="service-card">
-                <img src="images/serv3.jpg" alt="Location & Hébergement">
+            <div class="service-card" data-aos="fade-up"       data-aos-delay="300">
+                <img src="images/location-bks.png" alt="Location & Hébergement">
                 <h2 id="service3Title">Location & Hébergement</h2>
                 <p id="service3Desc">Location de voitures, villas et appartements meublés à Accra (prochainement
                     ailleurs au Ghana).</p>
@@ -179,7 +181,7 @@
     </section>
 
     <section id="propos" class="about-section">
-        <div class="container">
+        <div class="container"  data-aos="fade-right>
             <div class="content-wrapper">
 
                 <h1 class="company-name">BUYOR KING SOLUTION</h1>
@@ -200,21 +202,21 @@
             <p class="subtitle" id="contactSubtitle">Envoyez-nous un message</p>
 
             <div class="info-grid">
-                <div class="info-item">
+                <div class="info-item"  data-aos="fade-up" >
                     <div class="icon-box">
                         <img src="images/location.svg" alt="Adresse">
                     </div>
                     <span id="addressText">123 Aflao Ghana</span>
                 </div>
 
-                <div class="info-item">
+                <div class="info-item"   data-aos="fade-up"  data-aos-delay="200">
                     <div class="icon-box">
                         <img src="images/email.svg" alt="Email">
                     </div>
                     <span id="emailText">Email : info@bks.com</span>
                 </div>
 
-                <div class="info-item">
+                <div class="info-item "  data-aos="fade-up" data-aos-delay="300" >
                     <div class="icon-box">
                         <img src="images/phone.svg" alt="Téléphone">
                     </div>
@@ -358,6 +360,15 @@
             });
         });
     </script>
+    <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // durée de l'animation
+    once: true // animation ne se répète pas au scroll vers le haut
+  });
+</script>
+
 
 
 </body>

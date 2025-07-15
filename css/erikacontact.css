@@ -30,12 +30,14 @@
   padding: 20px;
   flex: 1 1 30%;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
-
-
 
 .service-card:hover {
   transform: translateY(-5px);
+  background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service-card img {
