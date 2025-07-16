@@ -43,8 +43,8 @@ document.addEventListener("click", (e) => {
 const translations = {
   fr: {
     home: "Accueil",
-    about: "À propos",
     services: "Services",
+    about: "À propos",
     contact: "Contact",
     heroTitle: `Envoyez,<br>épargnez, gagnez.<br><span style="color: #2563eb;">Facilement</span>`,
     heroDescription:
@@ -90,8 +90,8 @@ const translations = {
   },
   en: {
     home: "Home",
-    about: "About",
     services: "Services",
+    about: "About",
     contact: "Contact",
     heroTitle: `Send,<br>save, earn.<br><span style="color: #2563eb;">Easily</span>`,
     heroDescription:
