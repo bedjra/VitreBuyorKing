@@ -216,11 +216,11 @@ h1 {
 }
 
 .flag-fr {
-    background-image: url('.../../../images/fr.png');
+    background-image: url('/images/fr.png');
 }
 
 .flag-en {
-    background-image: url('.../../../images/gb.png');
+    background-image: url('/images/gb.png');
 }
 
 
